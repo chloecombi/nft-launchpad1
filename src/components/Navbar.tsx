@@ -1,9 +1,13 @@
+'use client';
 import React from 'react';
 import Link from 'next/link';
 import { Wallet } from 'lucide-react';
 import { Button } from './ui/button';
+import { cn } from '@/lib/utils';
+import { usePathname } from 'next/navigation';
 
 const Navbar: React.FC = () => {
+  const pathname = usePathname();
   return (
     <header className="flex flex-wrap md:justify-start md:flex-nowrap w-full text-sm">
       <nav
@@ -21,26 +25,38 @@ const Navbar: React.FC = () => {
           <div className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block ml-5">
             <div className="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:ps-7">
               <Link
-                className="flex gap-2 items-center font-medium text-blue-600 md:py-6 dark:text-blue-500"
+                className={cn(
+                  'font-medium md:py-6 dark:text-blue-500',
+                  pathname === '/' ? 'text-blue-500' : 'text-gray-500'
+                )}
                 href="/"
                 aria-current="page"
               >
                 Launchpad
               </Link>
               <Link
-                className="flex items-center gap-2 font-medium text-gray-500 hover:text-gray-400 md:py-6 dark:text-gray-400 dark:hover:text-gray-500"
+                className={cn(
+                  'items-center font-medium md:py-6 dark:text-blue-500',
+                  pathname === '/marketplace' ? 'text-blue-500' : 'text-gray-500'
+                )}
                 href="#"
               >
                 Marketplace
               </Link>
               <Link
-                className="flex items-center gap-2 font-medium text-gray-500 hover:text-gray-400 md:py-6 dark:text-gray-400 dark:hover:text-gray-500"
+                className={cn(
+                  'items-center font-medium md:py-6 dark:text-blue-500',
+                  pathname === '/generateNFT' ? 'text-blue-500' : 'text-gray-500'
+                )}
                 href="/generateNFT"
               >
                 Genius
               </Link>
               <Link
-                className="flex items-center gap-1 font-medium text-gray-500 hover:text-gray-400 md:py-6 dark:text-gray-400 dark:hover:text-gray-500"
+                className={cn(
+                  'items-center font-medium md:py-6 dark:text-blue-500',
+                  pathname === '/createNFT' ? 'text-blue-500' : 'text-gray-500'
+                )}
                 href="/createNFT"
               >
                 Create

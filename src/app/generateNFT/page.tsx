@@ -23,6 +23,7 @@ import Image from 'next/image';
 import { Card, CardFooter } from '@/components/ui/card';
 import { Download } from 'lucide-react';
 
+
 const generateNFT = () => {
   const router = useRouter();
   const [photos, setPhotos] = useState<string[]>([]);

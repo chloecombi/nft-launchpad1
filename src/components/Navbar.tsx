@@ -6,8 +6,26 @@ import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
 
+const data = [
+  {
+    href: "/",
+    text: "Launchpad"
+  },
+  {
+    href: "#",
+    text: "Marketplace"
+  },
+  {
+    href: "/generateNFT",
+    text: "Genius"
+  },
+  {
+    href: "/createNFT",
+    text: "Create"
+  }
+]
+
 const Navbar: React.FC = () => {
-  const pathname = usePathname();
   return (
     <header className="flex flex-wrap md:justify-start md:flex-nowrap w-full text-sm">
       <nav
@@ -24,43 +42,9 @@ const Navbar: React.FC = () => {
           </Link>
           <div className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block ml-5">
             <div className="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:ps-7">
-              <Link
-                className={cn(
-                  'font-medium md:py-6 dark:text-blue-500',
-                  pathname === '/' ? 'text-blue-500' : 'text-gray-500'
-                )}
-                href="/"
-                aria-current="page"
-              >
-                Launchpad
-              </Link>
-              <Link
-                className={cn(
-                  'items-center font-medium md:py-6 dark:text-blue-500',
-                  pathname === '/marketplace' ? 'text-blue-500' : 'text-gray-500'
-                )}
-                href="#"
-              >
-                Marketplace
-              </Link>
-              <Link
-                className={cn(
-                  'items-center font-medium md:py-6 dark:text-blue-500',
-                  pathname === '/generateNFT' ? 'text-blue-500' : 'text-gray-500'
-                )}
-                href="/generateNFT"
-              >
-                Genius
-              </Link>
-              <Link
-                className={cn(
-                  'items-center font-medium md:py-6 dark:text-blue-500',
-                  pathname === '/createNFT' ? 'text-blue-500' : 'text-gray-500'
-                )}
-                href="/createNFT"
-              >
-                Create
-              </Link>
+              {data.map((item, index) => (
+                <NavLink key={index} text={item.text} href={item.href}/>
+              ))}
             </div>
           </div>
           <div className="md:hidden">
@@ -115,3 +99,25 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
+
+type NavLinkProps = {
+  href: string;
+  text: string;
+};
+
+const NavLink = ({ href, text }: NavLinkProps) => {
+  const pathname = usePathname();
+  return (
+    <Link
+      className={cn(
+        'items-center font-medium border-b-[3px] border-transparent hover:border-blue-500 md:pb-3 md:pt-4 dark:text-blue-500',
+        pathname === href
+          ? 'text-blue-500 border-blue-500'
+          : 'text-gray-500'
+      )}
+      href={href}
+    >
+      {text}
+    </Link>
+  );
+};

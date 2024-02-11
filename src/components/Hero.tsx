@@ -12,7 +12,7 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <div className="relative overflow-hidden min-h-[calc(100vh-68px)] before:absolute before:top-0 before:start-1/2 before:bg-[url('https://preline.co/assets/svg/examples/polygon-bg-element.svg')] before:bg-no-repeat before:bg-top before:bg-cover before:w-full before:h-full before:-z-[1] before:transform before:-translate-x-1/2 dark:before:bg-[url('https://preline.co/assets/svg/examples-dark/polygon-bg-element.svg')]">
+    <div className="container relative overflow-hidden min-h-[calc(100vh-68px)] before:absolute before:top-0 before:start-1/2 before:bg-[url('https://preline.co/assets/svg/examples/polygon-bg-element.svg')] before:bg-no-repeat before:bg-top before:bg-cover before:w-full before:h-full before:-z-[1] before:transform before:-translate-x-1/2 dark:before:bg-[url('https://preline.co/assets/svg/examples-dark/polygon-bg-element.svg')]">
       <div className="mx-auto px-4 sm:px-6 flex gap-10 items-center">
         <div className="w-1/2 h-[calc(100vh-68px)] flex flex-col justify-center">
           <div className="mt-5 max-w-2xl">
@@ -132,8 +132,10 @@ const Hero = () => {
                 </div>
                 <Button>Upcoming</Button>
               </CardHeader>
-              <CardContent className="h-auto p-2 flex items-center justify-center">
-                <Image src="/nft.jpeg" alt="nft" width={240} height={120} className='object-contain' />
+              <CardContent className="p-1">
+                <div className="relative aspect-[0] h-[250px]">
+                  <Image src="/nft.jpeg" alt="nft" fill />
+                </div>
               </CardContent>
               <CardFooter className="p-4 justify-between">
                 <div>

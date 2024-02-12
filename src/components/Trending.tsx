@@ -2,7 +2,6 @@ import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader } from './ui/card';
 import Image from 'next/image';
 
-
 const Trending = () => {
   return (
     <div className="mx-10">
@@ -10,8 +9,8 @@ const Trending = () => {
         Upcoming <span className="text-yellow-400">FOMO</span>{' '}
       </h2>
       <div className="m-10">
-        <div className="flex gap-6 items-center justify-center">
-          <Card className="rounded-lg overflow-hidden w-[280px]">
+        <div className="flex flex-wrap gap-6 items-center justify-center">
+          <Card className="rounded-lg flex-shrink-0 w-[280px]">
             <CardHeader className="p-2 h-[280px]">
               <div className="relative aspect-square ">
                 <Image
@@ -35,7 +34,7 @@ const Trending = () => {
               </div>
             </CardContent>
           </Card>
-          <Card className="rounded-lg overflow-hidden w-[280px]">
+          <Card className="rounded-lg flex-shrink-0 w-[280px]">
             <CardHeader className="p-2 h-[280px]">
               <div className="relative aspect-square ">
                 <Image
@@ -59,7 +58,7 @@ const Trending = () => {
               </div>
             </CardContent>
           </Card>
-          <Card className="rounded-lg overflow-hidden w-[280px]">
+          <Card className="rounded-lg flex-shrink-0 overflow-hidden w-[280px]">
             <CardHeader className="p-2 h-[280px]">
               <div className="relative aspect-square ">
                 <Image
@@ -83,7 +82,7 @@ const Trending = () => {
               </div>
             </CardContent>
           </Card>
-          <Card className="rounded-lg overflow-hidden w-[280px]">
+          <Card className="rounded-lg flex-shrink-0 overflow-hidden w-[280px]">
             <CardHeader className="p-2 h-[280px]">
               <div className="relative aspect-square ">
                 <Image

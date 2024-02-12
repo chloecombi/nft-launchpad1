@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
           >
             FOMO Launchpad
           </Link>
-          <div className="flex gap-2 ml-10">
+          <div className="gap-2 ml-10 hidden lg:flex">
             {data.map((item, index) => (
               <NavLink key={index} text={item.text} href={item.href} />
             ))}
@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
         </div>
         <div className="flex items-center gap-4">
           <Link href="#" className="">
-            <Button variant="outline" className="p-2">
+            <Button variant="outline" className="p-2 hidden lg:visible">
               <User size={24} />
             </Button>
           </Link>

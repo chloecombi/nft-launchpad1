@@ -5,16 +5,16 @@ import HoverCard from './HoverCard';
 
 const Hero = () => {
   return (
-    <div className="container relative overflow-hidden min-h-[calc(100vh-68px)] w-screen">
-      <div className="mx-auto px-4 sm:px-6 flex flex-col md:flex-row gap-10 items-center z-10">
-        <div className="w-1/2 h-[calc(100vh-68px)] ml-10 flex flex-col justify-center">
+    <div className="container relative overflow-hidden min-h-[calc(100vh-68px)] w-screen mb-20 mt-10 lg:mt-0">
+      <div className="mx-auto px-4 sm:px-6 flex flex-col-reverse lg:flex-row gap-10 items-center z-10">
+        <div className="w-full lg:w-1/2 lg:h-[calc(100vh-68px)] ml-10 flex flex-col justify-center lg:items-start md:items-center z-10">
           <div className="max-w-2xl">
-            <h1 className="block font-bold text-gray-800 text-3xl md:text-4xl lg:text-5xl dark:text-white">
-              <span className="text-yellow-400">Don't</span> miss out!
+            <h1 className="block font-bold text-gray-800 text-3xl md:text-4xl lg:text-5xl dark:text-white text-center lg:text-start">
+              <span className="text-yellow-400 ">Don't</span> miss out!
             </h1>
           </div>
-          <div className="mt-3 max-w-xl">
-            <h2 className="block font-bold text-gray-800 text-3xl md:text-4xl lg:text-5xl dark:text-white">
+          <div className="mt-3 w-full md:max-w-xl text-center lg:text-start ">
+            <h2 className="block font-bold text-gray-800 text-3xl md:text-5xl dark:text-white">
               Bring your NFT's to life using{' '}
               <span className="text-yellow-400">FOMO Launchpad</span>
             </h2>
@@ -42,14 +42,9 @@ const Hero = () => {
             </button>
           </div>
         </div>
-        <div className="relative w-1/2 flex gap-4">
-          <div className="absolute right-0 -top-[160px] h-[700px] w-[700px] rounded-full bg-[url('/blob.svg')] bg-no-repeat rotate-12"></div>
-          <div
-            style={{
-              transform: 'translateZ(75px)',
-              transformStyle: 'preserve-3d',
-            }}
-          >
+        <div className="relative md:mt-4 lg:w-1/2 flex gap-4">
+          <div className="absolute right-0 top-0 md:-top-[100px] lg:-top-[160px] h-[600px] w-[600px] lg:h-[700px] lg:w-[700px] rounded-full bg-[url('/blob.svg')] bg-no-repeat rotate-12"></div>
+          <div className="hidden md:block">
             <HoverCard image="/nft4.jpeg" createdBy="LAMO BAE" />
           </div>
           <HoverCard image="/nft5.jpeg" createdBy="CAiO naE" />

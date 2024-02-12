@@ -13,7 +13,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Upload } from 'lucide-react';
 import Image from 'next/image';
 
-const createNFT = () => {
+const CreateNFT = () => {
   const [selectedFile, setSelectedFile] = useState<string | null>(null);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -160,4 +160,4 @@ const createNFT = () => {
   );
 };
 
-export default createNFT;
+export default CreateNFT;

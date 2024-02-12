@@ -24,7 +24,7 @@ import { Card, CardFooter } from '@/components/ui/card';
 import { Download } from 'lucide-react';
 
 
-const generateNFT = () => {
+const GenerateNFT = () => {
   const router = useRouter();
   const [photos, setPhotos] = useState<string[]>([]);
   const form = useForm<z.infer<typeof formSchema>>({
@@ -182,4 +182,4 @@ const generateNFT = () => {
   );
 };
 
-export default generateNFT;
+export default GenerateNFT;

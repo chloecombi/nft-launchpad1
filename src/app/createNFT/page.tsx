@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import * as z from 'zod';
 import { useForm } from 'react-hook-form';
 
@@ -11,13 +11,35 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Upload } from 'lucide-react';
+import Image from 'next/image';
 
 const createNFT = () => {
+  const [selectedFile, setSelectedFile] = useState<string | null>(null);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
   });
 
   const isLoading = form.formState.isSubmitting;
+
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0]; // Use optional chaining for safety
+
+    if (file) {
+      const reader = new FileReader();
+
+      reader.onload = (event: ProgressEvent<FileReader>) => {
+        setSelectedFile(event.target?.result as string); // Cast to string
+      };
+
+      reader.onerror = (error: any) => {
+        console.error('Error reading file:', error);
+        // Handle the error gracefully, e.g., display an error message to the user
+      };
+
+      reader.readAsDataURL(file);
+    }
+  };
+
   return (
     <div className="min-h-screen flex space-x-2">
       <div className="mt-5 mx-auto">
@@ -29,14 +51,37 @@ const createNFT = () => {
         <Form {...form}>
           <form>
             <div className="flex gap-10 items-start">
-              <div className="h-[420px] w-[540px] border-2 border-gray-200 border-dashed rounded-xl mt-4 flex items-center justify-center flex-col">
-                <Upload size={32} />
-                
-                <p>Browse file</p>
-                <p className="text-sm text-muted-foreground">Max size:50MB</p>
-                <p className="text-xs text-muted-foreground">
-                  JPG, PNG, GIF, SVG, MP4
-                </p>
+              <div className="">
+                <Label
+                  htmlFor="picture"
+                  className="h-[420px] w-[540px] border-2 border-gray-200 border-dashed rounded-xl mt-4 flex items-center justify-center flex-col relative aspect-[0]"
+                >
+                  <Input
+                    type="file"
+                    id="picture"
+                    style={{ display: 'none' }}
+                    onChange={handleFileChange}
+                  />
+                  {selectedFile ? (
+                    <Image
+                      src={selectedFile}
+                      alt="Preview"
+                      className="max-w-full max-h-full overflow-hidden object-cover rounded-lg"
+                      fill
+                    />
+                  ) : (
+                    <>
+                      <Upload size={32} />
+                      <p>Browse file</p>
+                      <p className="text-sm text-muted-foreground">
+                        Max size:50MB
+                      </p>
+                      <p className="text-xs text-muted-foreground">
+                        JPG, PNG, GIF, SVG, MP4
+                      </p>
+                    </>
+                  )}
+                </Label>
               </div>
               <div className="w-[540px] mt-4">
                 <Label htmlFor="name">Name *</Label>

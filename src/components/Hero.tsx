@@ -9,6 +9,7 @@ import {
 } from './ui/card';
 import { Button } from './ui/button';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Hero = () => {
   return (
@@ -30,7 +31,7 @@ const Hero = () => {
             </p>
           </div>
           <div className="mt-8 gap-3 flex">
-            <a
+            <Link
               className="
                 inline-flex 
                 justify-center items-center 
@@ -40,24 +41,10 @@ const Hero = () => {
                 to-violet-600
                  hover:from-violet-600 
                  hover:to-blue-600 border border-transparent text-white text-sm font-medium rounded-md focus:outline-none focus:ring-1 focus:ring-gray-600 py-3 px-4 dark:focus:ring-offset-gray-800"
-              href="#"
+              href="/createNFT"
             >
               Submit Project
-              <svg
-                className="flex-shrink-0 w-4 h-4"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-              >
-                <path
-                  d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </a>
+            </Link>
             <button
               type="button"
               className="relative group p-2 ps-3 inline-flex items-center gap-x-2 text-sm font-mono rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"

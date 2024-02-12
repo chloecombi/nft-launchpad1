@@ -2,12 +2,12 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-900/20 w-full">
+    <footer className="w-full px-10">
       <div className="w-full py-10 px-4 sm:px-6 lg:px-8 lg:pt-20 mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
           <div className="col-span-full lg:col-span-1">
             <a
-              className="flex-none text-xl font-semibold text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+              className="flex-none text-xl font-semibold dark:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
               href="#"
               aria-label="Brand"
             >
@@ -16,12 +16,12 @@ const Footer = () => {
           </div>
 
           <div className="col-span-1">
-            <h4 className="font-semibold text-gray-100">Product</h4>
+            <h4 className="font-semibold dark:text-gray-100">Product</h4>
 
             <div className="mt-3 grid space-y-3">
               <p>
                 <a
-                  className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                  className="inline-flex gap-x-2 dark:text-gray-400 dark:hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                   href="#"
                 >
                   Pricing
@@ -29,7 +29,7 @@ const Footer = () => {
               </p>
               <p>
                 <a
-                  className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                  className="inline-flex gap-x-2 dark:text-gray-400 dark:hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                   href="#"
                 >
                   Changelog
@@ -37,7 +37,7 @@ const Footer = () => {
               </p>
               <p>
                 <a
-                  className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                  className="inline-flex gap-x-2 dark:text-gray-400 dark:hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                   href="#"
                 >
                   Docs
@@ -47,12 +47,12 @@ const Footer = () => {
           </div>
 
           <div className="col-span-1">
-            <h4 className="font-semibold text-gray-100">Company</h4>
+            <h4 className="font-semibold dark:text-gray-100">Company</h4>
 
             <div className="mt-3 grid space-y-3">
               <p>
                 <a
-                  className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                  className="inline-flex gap-x-2 dark:text-gray-400 dark:hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                   href="#"
                 >
                   About us
@@ -60,7 +60,7 @@ const Footer = () => {
               </p>
               <p>
                 <a
-                  className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                  className="inline-flex gap-x-2 dark:text-gray-400 dark:hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                   href="#"
                 >
                   Blog
@@ -68,7 +68,7 @@ const Footer = () => {
               </p>
               <p>
                 <a
-                  className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                  className="inline-flex gap-x-2 dark:text-gray-400 dark:hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                   href="#"
                 >
                   Careers
@@ -76,7 +76,7 @@ const Footer = () => {
               </p>
               <p>
                 <a
-                  className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                  className="inline-flex gap-x-2 dark:text-gray-400 dark:hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                   href="#"
                 >
                   Customers
@@ -86,7 +86,7 @@ const Footer = () => {
           </div>
 
           <div className="col-span-2">
-            <h4 className="font-semibold text-gray-100">Stay up to date</h4>
+            <h4 className="font-semibold dark:text-gray-100">Stay up to date</h4>
 
             <form>
               <div className="mt-4 flex flex-col items-center gap-2 sm:flex-row sm:gap-3 rounded-lg p-2 ">
@@ -98,7 +98,7 @@ const Footer = () => {
                     type="text"
                     id="hero-input"
                     name="hero-input"
-                    className="py-3 px-4 block w-full border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-white dark:border-transparent dark:text-gray-400 dark:focus:ring-gray-600"
+                    className="py-3 px-4 block w-full border rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-white dark:border-transparent dark:text-gray-400 dark:focus:ring-gray-600"
                     placeholder="Enter your email"
                   />
                 </div>

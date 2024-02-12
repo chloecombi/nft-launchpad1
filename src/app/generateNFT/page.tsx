@@ -57,15 +57,11 @@ const GenerateNFT = () => {
   };
 
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center flex-col gap-10">
-      <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
-      <div className="mt-5 max-w-2xl text-center mx-auto">
+    <div className="min-h-screen w-full flex items-center justify-center flex-col gap-10">
+      <div className="mt-10 max-w-2xl text-center mx-auto">
         <h1 className="block font-bold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-gray-200">
           Generate
-          <span className="bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">
-            {' '}
-            Image
-          </span>
+          <span className="text-yellow-400"> Image</span>
         </h1>
         <p className="text-muted-foreground mt-3">
           Our most advanced image generation ai ✨

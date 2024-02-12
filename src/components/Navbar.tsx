@@ -4,7 +4,27 @@ import Link from 'next/link';
 import { User, Wallet } from 'lucide-react';
 import { Button } from './ui/button';
 import { ModeToggle } from './ModeToggle';
+import { cn } from '@/lib/utils';
+import { usePathname } from 'next/navigation';
 
+const data = [
+  {
+    href: '/',
+    text: 'Launchpad',
+  },
+  {
+    href: '#',
+    text: 'Marketplace',
+  },
+  {
+    href: '/generateNFT',
+    text: 'Genius',
+  },
+  {
+    href: '/createNFT',
+    text: 'Create',
+  },
+];
 
 const Navbar: React.FC = () => {
   return (
@@ -21,6 +41,11 @@ const Navbar: React.FC = () => {
           >
             FOMO Launchpad
           </Link>
+          <div className="flex gap-2 ml-10">
+            {data.map((item, index) => (
+              <NavLink key={index} text={item.text} href={item.href} />
+            ))}
+          </div>
         </div>
         <div className="flex items-center gap-4">
           <Link href="#" className="">
@@ -47,3 +72,24 @@ const Navbar: React.FC = () => {
 
 export default Navbar;
 
+type NavLinkProps = {
+  href: string;
+  text: string;
+};
+
+const NavLink = ({ href, text }: NavLinkProps) => {
+  const pathname = usePathname();
+  return (
+    <Link
+      className={cn(
+        ' dark:text-stone-300 border-b-[2.5px] border-transparent p-2 md:px-4 md:py-3 transition-all duration-300 ',
+        pathname === href
+          ? 'dark:text-stone-50 dark:border-stone-50 border-black font-medium'
+          : 'font-normal'
+      )}
+      href={href}
+    >
+      {text}
+    </Link>
+  );
+};

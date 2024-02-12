@@ -6,12 +6,14 @@ import { Bitcoin, EyeIcon } from 'lucide-react';
 
 const Trending = () => {
   return (
-    <div className="container">
-      <h2 className="text-3xl font-bold">Upcoming FOMO 🔥</h2>
+    <div className="mx-10">
+      <h2 className="text-3xl font-bold">
+        Upcoming <span className="text-yellow-400">FOMO</span>{' '}
+      </h2>
       <div className="m-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-8">
-          <Card className="rounded-lg overflow-hidden ">
-            <CardHeader className="p-2 h-[220px]">
+        <div className="flex gap-6 items-center justify-center">
+          <Card className="rounded-lg overflow-hidden w-[280px]">
+            <CardHeader className="p-2 h-[280px]">
               <div className="relative aspect-square ">
                 <Image
                   fill
@@ -21,142 +23,90 @@ const Trending = () => {
                 />
               </div>
             </CardHeader>
-            <CardContent>
-              <div className="flex items-center justify-between mt-2">
-                <p className="font-bold">Doodles</p>
-                <div className="bg-indigo-500 p-[2px] rounded-full">
-                  <Bitcoin className="text-white" size={20} />
-                </div>
+            <CardContent className="p-0">
+              <div className="mt-2 px-4">
+                <p className="font-bold text-xs">
+                  THE CHAMELEON by SNAZZY SOCIETY
+                </p>
+                <p className="text-muted-foreground mt-2">Date: TBA</p>
               </div>
-              <div className="text-sm text-muted-foreground mt-2 flex items-center justify-between">
-                <p>NFT Price</p>
-                <p className="text-black font-medium">1 BTC</p>
+              <div className="text-sm text-muted-foreground mt-2 flex items-center justify-between border-t p-4">
+                <p className="font-medium">Price: TBA</p>
+                <p className="font-medium">Supply: TBA</p>
               </div>
             </CardContent>
-            <CardFooter className="p-2">
-              <Button
-                variant="secondary"
-                className="text-white w-full gap-4 bg-gradient-to-tl 
-                from-blue-600 
-                to-violet-600
-                 hover:from-violet-600 
-                 hover:to-blue-600"
-              >
-                <EyeIcon />
-                View Details
-              </Button>
-            </CardFooter>
           </Card>
-          <Card className="rounded-lg overflow-hidden ">
-            <CardHeader className="p-2 h-[220px]">
+          <Card className="rounded-lg overflow-hidden w-[280px]">
+            <CardHeader className="p-2 h-[280px]">
               <div className="relative aspect-square ">
                 <Image
                   fill
                   alt="Generated"
-                  src="/nft.jpeg"
+                  src="/nft5.jpeg"
                   className="rounded-lg"
                 />
               </div>
             </CardHeader>
-            <CardContent>
-              <div className="flex items-center justify-between mt-2">
-                <p className="font-bold">Doodles</p>
-                <div className="bg-indigo-500 p-[2px] rounded-full">
-                  <Bitcoin className="text-white" size={20} />
-                </div>
+            <CardContent className="p-0">
+              <div className="mt-2 px-4">
+                <p className="font-bold text-xs">
+                  THE CHANLENCGE by SNAZZY SOCIETY
+                </p>
+                <p className="text-muted-foreground mt-2">Date: TBA</p>
               </div>
-              <div className="text-sm text-muted-foreground mt-2 flex items-center justify-between">
-                <p>NFT Price</p>
-                <p className="text-black font-medium">1 BTC</p>
+              <div className="text-sm text-muted-foreground mt-2 flex items-center justify-between border-t p-4">
+                <p className="font-medium">Price: TBA</p>
+                <p className="font-medium">Supply: TBA</p>
               </div>
             </CardContent>
-            <CardFooter className="p-2">
-              <Button
-                variant="secondary"
-                className="text-white w-full gap-4 bg-gradient-to-tl 
-                from-blue-600 
-                to-violet-600
-                 hover:from-violet-600 
-                 hover:to-blue-600"
-              >
-                <EyeIcon />
-                View Details
-              </Button>
-            </CardFooter>
           </Card>
-          <Card className="rounded-lg overflow-hidden ">
-            <CardHeader className="p-2 h-[220px]">
+          <Card className="rounded-lg overflow-hidden w-[280px]">
+            <CardHeader className="p-2 h-[280px]">
               <div className="relative aspect-square ">
                 <Image
                   fill
                   alt="Generated"
-                  src="/nft.jpeg"
+                  src="/nft6.jpeg"
                   className="rounded-lg"
                 />
               </div>
             </CardHeader>
-            <CardContent>
-              <div className="flex items-center justify-between mt-2">
-                <p className="font-bold">Doodles</p>
-                <div className="bg-indigo-500 p-[2px] rounded-full">
-                  <Bitcoin className="text-white" size={20} />
-                </div>
+            <CardContent className="p-0">
+              <div className="mt-2 px-4">
+                <p className="font-bold text-xs">
+                  THE DANCERER by SNAZZY SOCIETY
+                </p>
+                <p className="text-muted-foreground mt-2">Date: TBA</p>
               </div>
-              <div className="text-sm text-muted-foreground mt-2 flex items-center justify-between">
-                <p>NFT Price</p>
-                <p className="text-black font-medium">1 BTC</p>
+              <div className="text-sm text-muted-foreground mt-2 flex items-center justify-between border-t p-4">
+                <p className="font-medium">Price: TBA</p>
+                <p className="font-medium">Supply: TBA</p>
               </div>
             </CardContent>
-            <CardFooter className="p-2">
-              <Button
-                variant="secondary"
-                className="text-white w-full gap-4 bg-gradient-to-tl 
-                from-blue-600 
-                to-violet-600
-                 hover:from-violet-600 
-                 hover:to-blue-600"
-              >
-                <EyeIcon />
-                View Details
-              </Button>
-            </CardFooter>
           </Card>
-          <Card className="rounded-lg overflow-hidden ">
-            <CardHeader className="p-2 h-[220px]">
+          <Card className="rounded-lg overflow-hidden w-[280px]">
+            <CardHeader className="p-2 h-[280px]">
               <div className="relative aspect-square ">
                 <Image
                   fill
                   alt="Generated"
-                  src="/nft.jpeg"
+                  src="/nft4.jpeg"
                   className="rounded-lg"
                 />
               </div>
             </CardHeader>
-            <CardContent>
-              <div className="flex items-center justify-between mt-2">
-                <p className="font-bold">Doodles</p>
-                <div className="bg-indigo-500 p-[2px] rounded-full">
-                  <Bitcoin className="text-white" size={20} />
-                </div>
+            <CardContent className="p-0">
+              <div className="mt-2 px-4">
+                <p className="font-bold text-xs">
+                  THE IGOONIA by SNAZZY SOCIETY
+                </p>
+                <p className="text-muted-foreground mt-2">Date: TBA</p>
               </div>
-              <div className="text-sm text-muted-foreground mt-2 flex items-center justify-between">
-                <p>NFT Price</p>
-                <p className="text-black font-medium">1 BTC</p>
+              <div className="text-sm text-muted-foreground mt-2 flex items-center justify-between border-t p-4">
+                <p className="font-medium">Price: TBA</p>
+                <p className="font-medium">Supply: TBA</p>
               </div>
             </CardContent>
-            <CardFooter className="p-2">
-              <Button
-                variant="secondary"
-                className="text-white w-full gap-4 bg-gradient-to-tl 
-                from-blue-600 
-                to-violet-600
-                 hover:from-violet-600 
-                 hover:to-blue-600"
-              >
-                <EyeIcon />
-                View Details
-              </Button>
-            </CardFooter>
           </Card>
         </div>
       </div>

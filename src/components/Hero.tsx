@@ -1,23 +1,22 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-
-import { HeroCarousel } from './HeroCarousel';
+import HoverCard from './HoverCard';
 
 const Hero = () => {
   return (
     <div className="container relative overflow-hidden min-h-[calc(100vh-68px)] w-screen">
-      <div className="absolute bottom-0 right-[10px] top-[3px] h-[600px] w-[700px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.25),rgba(255,255,255,0))]"></div>
       <div className="mx-auto px-4 sm:px-6 flex flex-col md:flex-row gap-10 items-center z-10">
         <div className="w-1/2 h-[calc(100vh-68px)] ml-10 flex flex-col justify-center">
           <div className="max-w-2xl">
             <h1 className="block font-bold text-gray-800 text-3xl md:text-4xl lg:text-5xl dark:text-white">
-              <span className="">Don't</span> miss out!
+              <span className="text-yellow-400">Don't</span> miss out!
             </h1>
           </div>
           <div className="mt-3 max-w-xl">
             <h2 className="block font-bold text-gray-800 text-3xl md:text-4xl lg:text-5xl dark:text-white">
-              Bring your NFT's to life using <span>FOMO Launchpad</span>
+              Bring your NFT's to life using{' '}
+              <span className="text-yellow-400">FOMO Launchpad</span>
             </h2>
           </div>
           <div className="mt-8 gap-3 flex">
@@ -43,8 +42,17 @@ const Hero = () => {
             </button>
           </div>
         </div>
-        <div className="w-1/2 flex justify-center">
-          <HeroCarousel />
+        <div className="relative w-1/2 flex gap-4">
+          <div className="absolute right-0 -top-[160px] h-[700px] w-[700px] rounded-full bg-[url('/blob.svg')] bg-no-repeat rotate-12"></div>
+          <div
+            style={{
+              transform: 'translateZ(75px)',
+              transformStyle: 'preserve-3d',
+            }}
+          >
+            <HoverCard image="/nft4.jpeg" createdBy="LAMO BAE" />
+          </div>
+          <HoverCard image="/nft5.jpeg" createdBy="CAiO naE" />
         </div>
       </div>
     </div>

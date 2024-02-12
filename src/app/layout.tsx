@@ -4,7 +4,6 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { ThemeProvider } from '@/components/theme-provider';
-import FloatingSidebar from '@/components/FloatingSidebar';
 
 const ubuntu = Ubuntu({ weight: ['300','400', '500', '700'], subsets: ['latin' ]});
 
@@ -24,7 +23,6 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange> 
           <Navbar />
           {children}
-          <FloatingSidebar />
           <Footer />
         </ThemeProvider>
       </body>

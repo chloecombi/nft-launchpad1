@@ -41,8 +41,9 @@ const CreateNFT = () => {
   };
 
   return (
-    <div className="min-h-screen flex space-x-2">
-      <div className="mt-5 mx-auto">
+    <div className="min-h-screen flex flex-col">
+      <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:80px_80px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+      <div className="mt-5 mx-5 md:mx-auto mb-10">
         <h2 className="text-3xl font-semibold">Create an NFT</h2>
         <p className="text-muted-foreground">
           Once your item is minted you will not be able to change any of its
@@ -50,11 +51,11 @@ const CreateNFT = () => {
         </p>
         <Form {...form}>
           <form>
-            <div className="flex gap-10 items-start">
-              <div className="">
+            <div className="flex flex-col xl:flex-row gap-10 items-start">
+              <div className="h-[420px] w-full xl:w-[540px] mt-4">
                 <Label
                   htmlFor="picture"
-                  className="h-[420px] w-[540px] border-2 border-gray-200 border-dashed rounded-xl mt-4 flex items-center justify-center flex-col relative aspect-[0]"
+                  className="h-full w-full border-2 border-dashed rounded-xl flex items-center justify-center flex-col relative aspect-[0]"
                 >
                   <Input
                     type="file"
@@ -83,7 +84,7 @@ const CreateNFT = () => {
                   )}
                 </Label>
               </div>
-              <div className="w-[540px] mt-4">
+              <div className="w-full xl:w-[540px] mt-4 flex flex-col">
                 <Label htmlFor="name">Name *</Label>
                 <FormField
                   name="name"
@@ -150,7 +151,15 @@ const CreateNFT = () => {
                   )}
                 />
 
-                <Button>Create</Button>
+                <Button
+                  className="self-end bg-gradient-to-tl 
+                from-blue-600 
+                to-violet-600
+                 hover:from-violet-600 
+                 hover:to-blue-600 dark:text-white"
+                >
+                  Create
+                </Button>
               </div>
             </div>
           </form>

@@ -1,3 +1,4 @@
+import FAQ from '@/components/FAQ';
 import Hero from '@/components/Hero';
 import StatsTable from '@/components/StatsTable';
 import Steps from '@/components/Steps';
@@ -10,6 +11,7 @@ export default function Home() {
       {/* <StatsTable /> */}
       <Trending />
       <Steps />
+      <FAQ />
     </main>
   );
 }

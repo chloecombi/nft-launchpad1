@@ -23,7 +23,6 @@ import Image from 'next/image';
 import { Card, CardFooter } from '@/components/ui/card';
 import { Download } from 'lucide-react';
 
-
 const GenerateNFT = () => {
   const router = useRouter();
   const [photos, setPhotos] = useState<string[]>([]);
@@ -59,7 +58,7 @@ const GenerateNFT = () => {
 
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center flex-col gap-10">
-      <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#cacbce_1px,transparent_1px)] [background-size:32px_32px]"></div>
+      <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
       <div className="mt-5 max-w-2xl text-center mx-auto">
         <h1 className="block font-bold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-gray-200">
           Generate
@@ -76,7 +75,7 @@ const GenerateNFT = () => {
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="bg-white w-full md:w-[750px] rounded-xl border p-2 focus-within:shadow-sm flex gap-2"
+            className="w-full md:w-[750px] rounded-xl border p-2 focus-within:shadow-sm flex flex-col md:flex-row gap-2"
           >
             <FormField
               name="prompt"
@@ -97,7 +96,7 @@ const GenerateNFT = () => {
               control={form.control}
               name="amount"
               render={({ field }) => (
-                <FormItem className="w-[110px]">
+                <FormItem className="w-full md:w-[110px]">
                   <Select
                     disabled={isLoading}
                     onValueChange={field.onChange}
@@ -124,7 +123,7 @@ const GenerateNFT = () => {
               control={form.control}
               name="resolution"
               render={({ field }) => (
-                <FormItem className="w-[110px]">
+                <FormItem className="w-full md:w-[110px]">
                   <Select
                     disabled={isLoading}
                     onValueChange={field.onChange}
@@ -147,7 +146,16 @@ const GenerateNFT = () => {
                 </FormItem>
               )}
             />
-            <Button className="rounded-lg">Generate</Button>
+            <Button
+              className="rounded-lg  
+              bg-gradient-to-tl 
+                from-blue-600 
+                to-violet-600
+                 hover:from-violet-600 
+                 hover:to-blue-600 text-white"
+            >
+              Generate
+            </Button>
           </form>
         </Form>
         {isLoading && (
@@ -162,14 +170,14 @@ const GenerateNFT = () => {
           {photos.map((src) => (
             <Card key={src} className="rounded-lg overflow-hidden">
               <div className="relative aspect-square">
-                <Image
-                  fill
-                  alt="Generated"
-                  src={src}
-                />
+                <Image fill alt="Generated" src={src} />
               </div>
               <CardFooter className="p-2">
-                <Button onClick={() => window.open(src)} variant="secondary" className="w-full">
+                <Button
+                  onClick={() => window.open(src)}
+                  variant="secondary"
+                  className="w-full"
+                >
                   <Download className="h-4 w-4 mr-2" />
                   Download
                 </Button>

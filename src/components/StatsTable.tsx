@@ -12,7 +12,7 @@ const StatsTable = () => {
   const [selectedDay, setSelectedDay] = useState(time[0]);
 
   return (
-    <div className="container min-h-screen w-full">
+    <div className="min-h-screen w-full">
       <div className="flex items-center justify-between">
         <div className="bg-gray-100 flex items-center gap-1 shadow-lg p-1 rounded-xl">
           {filter.map((item) => (

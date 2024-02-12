@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 w-full">
-      <div className="w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 lg:pt-20 mx-auto">
+    <footer className="bg-slate-900/20 w-full">
+      <div className="w-full py-10 px-4 sm:px-6 lg:px-8 lg:pt-20 mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
           <div className="col-span-full lg:col-span-1">
             <a
@@ -11,7 +11,7 @@ const Footer = () => {
               href="#"
               aria-label="Brand"
             >
-              LMS Launchpad
+              FOMO Launchpad
             </a>
           </div>
 
@@ -89,7 +89,7 @@ const Footer = () => {
             <h4 className="font-semibold text-gray-100">Stay up to date</h4>
 
             <form>
-              <div className="mt-4 flex flex-col items-center gap-2 sm:flex-row sm:gap-3 bg-white rounded-lg p-2 dark:bg-gray-800">
+              <div className="mt-4 flex flex-col items-center gap-2 sm:flex-row sm:gap-3 rounded-lg p-2 ">
                 <div className="w-full">
                   <label htmlFor="hero-input" className="sr-only">
                     Search
@@ -98,7 +98,7 @@ const Footer = () => {
                     type="text"
                     id="hero-input"
                     name="hero-input"
-                    className="py-3 px-4 block w-full border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-transparent dark:text-gray-400 dark:focus:ring-gray-600"
+                    className="py-3 px-4 block w-full border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-white dark:border-transparent dark:text-gray-400 dark:focus:ring-gray-600"
                     placeholder="Enter your email"
                   />
                 </div>

@@ -1,13 +1,12 @@
 import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader } from './ui/card';
 import Image from 'next/image';
-import { Button } from './ui/button';
-import { Bitcoin, EyeIcon } from 'lucide-react';
+
 
 const Trending = () => {
   return (
     <div className="mx-10">
-      <h2 className="text-3xl font-bold">
+      <h2 className="text-3xl font-bold text-center">
         Upcoming <span className="text-yellow-400">FOMO</span>{' '}
       </h2>
       <div className="m-10">

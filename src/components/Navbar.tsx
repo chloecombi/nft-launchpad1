@@ -1,29 +1,29 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { Wallet } from 'lucide-react';
+import { User, Wallet } from 'lucide-react';
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
 
 const data = [
   {
-    href: "/",
-    text: "Launchpad"
+    href: '/',
+    text: 'Launchpad',
   },
   {
-    href: "#",
-    text: "Marketplace"
+    href: '#',
+    text: 'Marketplace',
   },
   {
-    href: "/generateNFT",
-    text: "Genius"
+    href: '/generateNFT',
+    text: 'Genius',
   },
   {
-    href: "/createNFT",
-    text: "Create"
-  }
-]
+    href: '/createNFT',
+    text: 'Create',
+  },
+];
 
 const Navbar: React.FC = () => {
   return (
@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
           <div className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block ml-5">
             <div className="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:ps-7">
               {data.map((item, index) => (
-                <NavLink key={index} text={item.text} href={item.href}/>
+                <NavLink key={index} text={item.text} href={item.href} />
               ))}
             </div>
           </div>
@@ -89,10 +89,15 @@ const Navbar: React.FC = () => {
             </button>
           </div>
         </div>
-        <Button className="flex gap-2">
-          <Wallet size={18} />
-          <p>Connect</p>
-        </Button>
+        <div className="flex items-center gap-4">
+          <Link href="#" className="h-10 w-10 cursor-pointer rounded-lg flex items-center justify-center bg-slate-200/50 hover:bg-slate-200 p-2">
+            <User size={24} />
+          </Link>
+          <Button className="flex gap-2">
+            <Wallet size={18} />
+            <p>Connect</p>
+          </Button>
+        </div>
       </nav>
     </header>
   );
@@ -111,9 +116,7 @@ const NavLink = ({ href, text }: NavLinkProps) => {
     <Link
       className={cn(
         'items-center font-medium border-b-[3px] border-transparent hover:border-blue-500 md:pb-3 md:pt-4 dark:text-blue-500',
-        pathname === href
-          ? 'text-blue-500 border-blue-500'
-          : 'text-gray-500'
+        pathname === href ? 'text-blue-500 border-blue-500' : 'text-gray-500'
       )}
       href={href}
     >

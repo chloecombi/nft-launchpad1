@@ -13,10 +13,6 @@ const data = [
     text: 'Launchpad',
   },
   {
-    href: '#',
-    text: 'Marketplace',
-  },
-  {
     href: '/generateNFT',
     text: 'Genius',
   },

@@ -11,7 +11,7 @@ import Phases from '@/components/sections/Phases';
 const Collections = () => {
   const { step } = useStore((state) => state);
   return (
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col justify-center my-20">
       <div className="text-3xl md:text-5xl  font-bold text-center mt-5">
         Create Collection
       </div>

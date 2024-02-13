@@ -21,6 +21,7 @@ const Collections = () => {
           <Step stepNumber={2} />
           <Step stepNumber={3} />
           <Step stepNumber={4} />
+          <Step stepNumber={5} />
         </div>
       </section>
       {step === 1 && <CollectionDetails />}

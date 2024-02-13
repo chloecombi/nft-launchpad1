@@ -8,11 +8,12 @@ import { useRouter } from 'next/navigation';
 
 export default function Success() {
   const router = useRouter();
-  const { step, decreaseStep, isSubmitted, onSubmit } =
-    useStore((state) => state);
+  const { step, decreaseStep, isSubmitted, onSubmit, } = useStore(
+    (state) => state
+  );
 
   const onNext = () => {
-    router.push("/")
+    router.push('/');
   };
 
   const onPrevious = () => {
@@ -21,10 +22,7 @@ export default function Success() {
 
   return (
     <Container onNext={onNext} onPreviousStep={onPrevious}>
-      <SectionHeader
-        title="Success"
-        description=""
-      />
+      <SectionHeader title="Success" description="" />
       <Label htmlFor="Transaction hash">Transaction hash</Label>
       <Input
         type="text"

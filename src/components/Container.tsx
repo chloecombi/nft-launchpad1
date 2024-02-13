@@ -22,7 +22,7 @@ export default function Container({
     <>
       <section
         className={cn(
-          'w-80 px-6 py-8 lg:px-[100px] lg:pt-10 mx-auto lg:w-[1024px] rounded-[15px] lg:static left-1/2 lg:left-0 lg:p-4 min-h-[376px] lg:min-h-[600px] ',
+          'px-6 py-8 lg:px-[100px] lg:pt-10 lg:mx-auto lg:w-[1024px] rounded-[15px] lg:static left-1/2 lg:left-0 lg:p-4 min-h-[376px] lg:min-h-[600px] ',
           className
         )}
       >
@@ -31,7 +31,7 @@ export default function Container({
           {children}
           {!isSubmitted && (
             <FormFieldArea
-              className={cn("hidden lg:inline-flex", step === 3 && "mt-24")}
+              className={cn('hidden lg:inline-flex', step === 3 && 'mt-24')}
               onHandleNextStep={onNext}
               onHandlePreviousStep={onPreviousStep}
             />

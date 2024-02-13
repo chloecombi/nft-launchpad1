@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import SectionHeader from '../SectionHeader';
 import Container from '../Container';
 import useStore from '../../store/useStore';
@@ -12,8 +12,9 @@ export default function Success() {
     (state) => state
   );
 
+
   const onNext = () => {
-    router.push('/');
+    window.location.reload();
   };
 
   const onPrevious = () => {

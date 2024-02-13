@@ -42,11 +42,11 @@ const Mint = () => {
   
     return (
       <div className="min-h-screen flex flex-col">
-        <div className="mt-10 mx-5 md:mx-auto mb-10">
+        <div className="mt-20 mx-5 md:mx-auto mb-10">
           <h2 className="text-3xl font-semibold">
             Create an <span className="text-yellow-400">NFT</span>
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground mb-10">
             Once your item is minted you will not be able to change any of its
             information
           </p>

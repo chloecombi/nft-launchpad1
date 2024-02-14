@@ -48,7 +48,7 @@ const Trending = () => {
             <CardContent className="p-0">
               <div className="mt-2 px-4">
                 <p className="font-bold text-xs">
-                  THE CHANLENCGE by SNAZZY SOCIETY
+                  THE GECKO by SNAZZY SOCIETY
                 </p>
                 <p className="text-muted-foreground mt-2">Date: TBA</p>
               </div>
@@ -72,7 +72,7 @@ const Trending = () => {
             <CardContent className="p-0">
               <div className="mt-2 px-4">
                 <p className="font-bold text-xs">
-                  THE DANCERER by SNAZZY SOCIETY
+                  THE IGUANA by SNAZZY SOCIETY
                 </p>
                 <p className="text-muted-foreground mt-2">Date: TBA</p>
               </div>
@@ -96,7 +96,7 @@ const Trending = () => {
             <CardContent className="p-0">
               <div className="mt-2 px-4">
                 <p className="font-bold text-xs">
-                  THE IGOONIA by SNAZZY SOCIETY
+                  THE ORIGINS by SNAZZY SOCIETY
                 </p>
                 <p className="text-muted-foreground mt-2">Date: TBA</p>
               </div>

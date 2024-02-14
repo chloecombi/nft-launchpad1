@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
             href="/"
             aria-label="FOMO_LAUNCHPAD"
           >
-            FOMO Launchpad <span className="font-semibold italic">by SSS</span>
+            FOMO Launchpad <span className="font-thin italic">by SSS</span>
           </Link>
           <div className="gap-2 ml-10 hidden lg:flex">
             {data.map((item, index) => (

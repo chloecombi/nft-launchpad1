@@ -118,6 +118,25 @@ const Mint = () => {
                       </FormItem>
                     )}
                   />
+                    
+                <Label htmlFor="Token-Uri">Token-Uri *</Label>
+                  <FormField
+                    name="Token-Uri"
+                    render={({ field }) => (
+                      <FormItem className="flex-1">
+                        <FormControl className="m-0 p-0">
+                          <Input
+                            className="border w-full p-4 outline-none focus-visible:ring-0 focus-visible:ring-transparent mb-4 mt-2 rounded-lg"
+                            disabled={isLoading}
+                            placeholder="Enter Token-Uri"
+                            {...field}
+                          />
+                        </FormControl>
+                      </FormItem>
+                    )}
+                  />
+
+                    
                   <Label htmlFor="description">Description</Label>
                   <FormField
                     name="description"

@@ -29,6 +29,7 @@ const formSchema = z.object({
     .string()
     .min(1, { message: 'Royalty Percentage is required' }),
   description: z.string().min(1, { message: 'Description is required' }),
+  Token-Uri: z.string().min(1, { message: 'Description is required' }),
 });
 
 type ValidationSchema = z.infer<typeof formSchema>;

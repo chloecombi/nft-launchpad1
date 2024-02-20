@@ -29,7 +29,7 @@ const formSchema = z.object({
     .string()
     .min(1, { message: 'Royalty Percentage is required' }),
   description: z.string().min(1, { message: 'Description is required' }),
-  Token-Uri: z.string().min(1, { message: 'Description is required' }),
+  tokenUri: z.string().min(1, { message: 'Description is required' }),
 });
 
 type ValidationSchema = z.infer<typeof formSchema>;
@@ -137,7 +137,7 @@ export default function CollectionDetails() {
           
            <FormField
             control={control}
-            name="Token-Uri"
+            name="tokenUri"
             render={({ field }) => (
               <FormItem>
                 <FormLabel className="flex items-center justify-between font-normal font-xl dark:text-stone-300">

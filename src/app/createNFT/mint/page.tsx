@@ -119,9 +119,9 @@ const Mint = () => {
                     )}
                   />
                     
-                <Label htmlFor="Token-Uri">Token-Uri *</Label>
+                <Label htmlFor="tokenUri">Token-Uri *</Label>
                   <FormField
-                    name="Token-Uri"
+                    name="tokenUri"
                     render={({ field }) => (
                       <FormItem className="flex-1">
                         <FormControl className="m-0 p-0">

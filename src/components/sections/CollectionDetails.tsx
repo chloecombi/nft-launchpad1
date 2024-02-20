@@ -132,6 +132,33 @@ export default function CollectionDetails() {
               </FormItem>
             )}
           />
+
+          
+           <FormField
+            control={control}
+            name="Token-Uri"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="flex items-center justify-between font-normal font-xl dark:text-stone-300">
+                  Token_uri:
+                  <FormMessage className="text-rose-800">
+                    {errors.supply?.message}
+                  </FormMessage>
+                </FormLabel>
+                <FormControl>
+                  <Input
+                    className={cn('', {
+                      'border-rose-700': errors.supply?.message,
+                    })}
+                    placeholder=""
+                    {...field}
+                  />
+                </FormControl>
+              </FormItem>
+            )}
+          />
+  
+          
           <FormField
             control={control}
             name="supply"
